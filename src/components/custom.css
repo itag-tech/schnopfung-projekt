@@ -1,5 +1,5 @@
 body {
-    background: #e5dada;
+    background: #1b1b1b;
   }
   
   .grid-container {
@@ -9,11 +9,10 @@ body {
     grid-auto-rows: max-content;
     /*Define our columns */
     grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
-    grid-gap: 1.5em;
+    grid-gap: 5em;
   }
   
   .grid-item {
-    border-radius: 10px;
     padding: 20px;
     color: #fff;
   }
@@ -24,14 +23,15 @@ body {
   }
   
   .grid-item:nth-child(odd) {
-    background-color: #e59500;
+    background-color: #5a5a5a;
   }
   
   .grid-item:nth-child(even) {
-    background-color: #840032;
+    background-color: #0b2b1f;
   }
   
   header {
+    background-color: #0b2b1f;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -46,7 +46,7 @@ body {
   }
   
   header > div > button {
-    color: #282a36;
+    color: #181818;
     background: #f8f8f2;
     text-decoration: none;
     font-size: 1.2rem;

@@ -15,7 +15,7 @@ const IndexPage = ({data}) => {
       {products.map(({node : product}) => (
         <article className='grid-item' key={product.id}>
           <h2>{product.name}</h2>
-          <p>{product.price}</p>
+          <p>Tarif : {product.price} TTC</p>
           <GatsbyImage image={product.image.gatsbyImageData} />
           <a 
             href='#'
