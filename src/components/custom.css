@@ -1,5 +1,5 @@
 body {
-    background: #282a36;
+    background: #e5dada;
   }
   
   .grid-container {
@@ -8,8 +8,8 @@ body {
     /* Define Auto Row size */
     grid-auto-rows: max-content;
     /*Define our columns */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
+    grid-gap: 1.5em;
   }
   
   .grid-item {
@@ -24,11 +24,11 @@ body {
   }
   
   .grid-item:nth-child(odd) {
-    background-color: #44475a;
+    background-color: #e59500;
   }
   
   .grid-item:nth-child(even) {
-    background-color: #6272a4;
+    background-color: #840032;
   }
   
   header {

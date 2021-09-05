@@ -1,12 +1,9 @@
-const products = require('./src/products')
-
 module.exports = {
   siteMetadata: {
     title: `Schopfung Projekt`,
     description: `Description du site Schopfung Projekt`,
     author: `Thomas AGUIRREGABIRIA`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-    products: [...products]
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,6 +17,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-source-datocms',
+      options: {apiToken: `0b2da491ae97ffdc0d787f61848c89`}
+    },
+    {
+      resolve: 'gatsby-plugin-snipcart',
+      options: {
+        apiKey: `ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3`,
+        autopop: true,
+        js: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js',
+        jquery: false,
+        styles: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css'
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

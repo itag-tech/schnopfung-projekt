@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <div id="snipcart" data-config-modal-style="side" data-api-key="ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3" hidden />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{

@@ -13,6 +13,8 @@
     "gatsby-plugin-offline": "^4.13.0",
     "gatsby-plugin-react-helmet": "^4.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
+    "gatsby-plugin-snipcart": "^1.1.2",
+    "gatsby-source-datocms": "^2.6.16",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-sharp": "^3.13.0",
     "prop-types": "^15.7.2",
