@@ -1,57 +1,39 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  Schnopfung Projekt
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Site e-commerce créé à titre gracieux pour une personne que j'apprécie. Cet ami est artisan et créateur d'objets conçus sur la base de matériaux recyclés.
+
+Techniquement ce site est construit avec **Gatsby**, **DatoCMS**, **SnipCart**.
+
+- Gatsby : générateur de site static créé sur une base ReactJS.
+- DatoCMS : CMS headless qui permet à mon ami d'effectuer un CRUD sur le contenu de son site.
+- SnipCart : service (API) appelé pour la gestion des achats en ligne.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+1.  **Installation du projet**
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    npm install
     ```
 
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+1.  **Lancement du projet**
 
     ```shell
-    cd my-default-starter/
-    gatsby develop
+    npm start
     ```
+    Se connecter à `http://localhost:8000` pour accéder au site.
 
-1.  **Open the source code and start editing!**
+## 🧐 Qu'il y a-t-il à l'intérieur du projet ?
 
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Voici l'arborescence du projet :
 
     .
     ├── node_modules
+    ├── public
     ├── src
     ├── .gitignore
     ├── .prettierrc
@@ -59,6 +41,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
+    ├── import.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
@@ -87,19 +70,3 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
