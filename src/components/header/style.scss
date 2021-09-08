@@ -1,0 +1,42 @@
+HEADER {
+  background: #0b2b1f;
+  color: #fff;
+  width: 100%;
+  z-index: 1;
+
+  .custom-header {
+    display: flex;
+    margin: 0 auto;
+    max-width: 70rem;
+    padding: 1.45rem 1.0875rem;
+
+    > H1 {
+      flex: 1;
+    }
+
+    BUTTON.custom-cart {
+      display: flex;
+      flex-direction: row;
+      background: none;
+      color: #fff;
+      border: none;
+
+      .cart-icon {
+        margin: auto;
+      }
+
+      .custom-snipcart {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .custom-count {
+        font-size: 0.9rem;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: red;
+      }
+    }
+  }
+}

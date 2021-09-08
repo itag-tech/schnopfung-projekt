@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+    },
+   },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -25,11 +31,35 @@ module.exports = {
       resolve: 'gatsby-plugin-snipcart',
       options: {
         apiKey: `ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3`,
-        autopop: true,
         js: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js',
         jquery: false,
         styles: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css'
       }
+    },
+    {
+      resolve: `gatsby-plugin-snipcart-advanced`,
+      options: {
+        version: "3.2.1",
+        publicApiKey: "ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3", // use public api key here or in environment variable
+        defaultLang: "fr",
+        currency: "eur",
+        openCartOnAdd: false,
+        useSideCart: false,
+        locales: {
+          fr: {
+            actions: {
+              checkout: "Valider le panier",
+            },
+          },
+        },
+        templatesUrl:
+          "path on your template file. Set file in the static folder, ex: '/snipcart/index.html'",
+        // not work on dev. Gatsby not serve html file in dev https://github.com/gatsbyjs/gatsby/issues/13072
+        innerHTML: `
+            <billing section="bottom">
+                <h1>factures ici</h1>
+            </billing>`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
