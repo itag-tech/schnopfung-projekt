@@ -5,6 +5,11 @@ import { Link } from "gatsby"
 import { Icon } from 'antd'
 import './style.scss'
 
+/**
+ * Header du site avec titre et panier
+ * @param {siteTitle} Nom du site  
+ * @returns 
+ */
 const Header = ({ siteTitle }) => {
 
   const [cartState, setCartState] = useState()
@@ -14,6 +19,10 @@ const Header = ({ siteTitle }) => {
     localSnipcartContext && setCartState(localSnipcartContext.state)
   }, [localSnipcartContext])
   
+  //---------------------------------------------------------------------------------------------------
+  //-----------------------------------  ↓  RENDER  ↓  ------------------------------------------------
+  //---------------------------------------------------------------------------------------------------
+
   return (
     cartState ? 
     <header>
@@ -37,9 +46,6 @@ const Header = ({ siteTitle }) => {
                   key="shopping-cart" /> 
             </div>
             <div className='custom-snipcart'>
-              {/* <div className='custom-cart-detail'>
-                <span className='snipcart-total-price custom-cart-detail'></span> 
-              </div> */}
               <div className={`${cartState.cartQuantity !== 0 && 'custom-count' } `}>
                 <span>{cartState.cartQuantity !== 0 && cartState.cartQuantity}</span> 
               </div>

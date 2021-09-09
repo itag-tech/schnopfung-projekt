@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@ant-design/icons": "^4.6.4",
     "antd": "3.26.19",
     "datocms-client": "^3.4.14",
     "gatsby": "^3.13.0",
@@ -15,7 +16,6 @@
     "gatsby-plugin-react-helmet": "^4.13.0",
     "gatsby-plugin-sass": "^4.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
-    "gatsby-plugin-snipcart": "^1.1.2",
     "gatsby-plugin-snipcart-advanced": "^1.0.3",
     "gatsby-source-datocms": "^2.6.16",
     "gatsby-source-filesystem": "^3.13.0",

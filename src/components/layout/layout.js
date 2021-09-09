@@ -44,9 +44,9 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, création
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.linkedin.com/in/thomas-aguirregabiria-52006193/">ITAG Technology</a>
         </footer>
       </div>
     </>
