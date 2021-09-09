@@ -28,6 +28,15 @@ module.exports = {
       options: {apiToken: `0b2da491ae97ffdc0d787f61848c89`}
     },
     {
+      resolve: 'gatsby-plugin-snipcart',
+      options: {
+        apiKey: `ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3`,
+        js: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js',
+        jquery: false,
+        styles: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css'
+      }
+    },
+    {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: "3.2.1",
