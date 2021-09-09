@@ -1,3 +1,39 @@
-.toto {
-  color: white;
+.custom-product-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .custom-carousel {
+    flex-grow: 1;
+    width: 500px;
+    .slick-slide {
+      padding: 40px;
+    }
+    .slick-dots {
+      BUTTON {
+        background: #0b2b1f;
+        opacity: 1;
+        width: 30px;
+        height: 10px;
+      }
+
+      & .slick-active BUTTON {
+        background: #189b6b;
+      }
+    }
+  }
+  .custom-product-description {
+    flex-grow: 2;
+    height: 100%;
+
+    .custom-button-add-cart {
+      height: 100%;
+      background-color: #189b6b;
+      color: white;
+
+      > i.anticon-shopping-cart.anticon {
+        color: white !important;
+      }
+    }
+  }
 }

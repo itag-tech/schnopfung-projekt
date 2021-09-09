@@ -1,0 +1,20 @@
+.grid-container {
+  display: grid;
+  padding-top: 5%;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
+  grid-gap: 2em;
+
+  .custom-card {
+    margin: 0 auto;
+  }
+} // .grid-container
+
+.spinner {
+  display: grid;
+  margin: 50%;
+}
+
+.ant-spin-dot-item {
+  background-color: #0b2b1f;
+}

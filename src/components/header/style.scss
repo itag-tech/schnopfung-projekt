@@ -18,11 +18,12 @@ HEADER {
       display: flex;
       flex-direction: row;
       background: none;
-      color: #fff;
+      color: rgb(255, 255, 255);
       border: none;
 
-      .cart-icon {
+      .custom-cart-icon {
         margin: auto;
+        cursor: pointer;
       }
 
       .custom-snipcart {
@@ -31,7 +32,7 @@ HEADER {
       }
 
       .custom-count {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         width: 20px;
         height: 20px;
         border-radius: 10px;
