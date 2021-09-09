@@ -24,7 +24,6 @@ const Header = ({ siteTitle }) => {
   //---------------------------------------------------------------------------------------------------
 
   return (
-    cartState ? 
     <header>
       <div className='custom-header'>
         <h1 style={{ margin: 0 }}>
@@ -38,7 +37,7 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Link>
         </h1>
-        <button className='snipcart-checkout custom-cart'>
+        {cartState && <button className='snipcart-checkout custom-cart'>
             <div className='custom-cart-icon'>
               <Icon
                   style={{fontSize: '2em'}}
@@ -50,9 +49,10 @@ const Header = ({ siteTitle }) => {
                 <span>{cartState.cartQuantity !== 0 && cartState.cartQuantity}</span> 
               </div>
             </div>
-        </button>
+        </button> 
+        }
       </div>
-    </header> : <></>
+    </header>
   )
 }
 

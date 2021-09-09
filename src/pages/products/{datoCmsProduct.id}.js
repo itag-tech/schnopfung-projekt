@@ -64,7 +64,7 @@ const Product = ({data, pageContext}) => {
 export default Product
 
 export const query = graphql`
-  query query {
+  query Query {
     allDatoCmsProduct {
       edges {
         node {
