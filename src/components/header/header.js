@@ -8,13 +8,14 @@ import './style.scss'
 const Header = ({ siteTitle }) => {
 
   const [cartState, setCartState] = useState()
-  const snipcartContext = useContext(SnipcartContext)
+  const localSnipcartContext = useContext(SnipcartContext)
 
   useEffect(() => {
-    snipcartContext.state && setCartState(snipcartContext.state)
-  }, [snipcartContext])
-
+    localSnipcartContext && setCartState(localSnipcartContext.state)
+  }, [localSnipcartContext])
+  
   return (
+    cartState ? 
     <header>
       <div className='custom-header'>
         <h1 style={{ margin: 0 }}>
@@ -29,7 +30,7 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h1>
         <button className='snipcart-checkout custom-cart'>
-            <div className='cart-icon'>
+            <div className='custom-cart-icon'>
               <Icon
                   style={{fontSize: '2em'}}
                   type="shopping-cart" 
@@ -39,13 +40,13 @@ const Header = ({ siteTitle }) => {
               {/* <div className='custom-cart-detail'>
                 <span className='snipcart-total-price custom-cart-detail'></span> 
               </div> */}
-              <div className={`${cartState?.cartQuantity != 0 ? 'custom-count' : '' } `}>
-                <span className='snipcart-items-count'>{cartState?.cartQuantity ? cartState?.cartQuantity : ''}</span> 
+              <div className={`${cartState.cartQuantity !== 0 && 'custom-count' } `}>
+                <span>{cartState.cartQuantity !== 0 && cartState.cartQuantity}</span> 
               </div>
             </div>
         </button>
       </div>
-    </header>
+    </header> : <></>
   )
 }
 
