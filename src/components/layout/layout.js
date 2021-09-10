@@ -27,9 +27,9 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <div id="snipcart" data-config-modal-style="side" data-api-key="ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3" hidden />
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
           margin: `0 auto`,
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
           <a href="https://www.linkedin.com/in/thomas-aguirregabiria-52006193/">ITAG Technology</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
