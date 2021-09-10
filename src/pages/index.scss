@@ -4,11 +4,8 @@
   grid-auto-rows: max-content;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2em;
-
-  .custom-card {
-    margin: 0 auto;
-  }
-} // .grid-container
+  justify-items: center;
+}
 
 .spinner {
   display: grid;

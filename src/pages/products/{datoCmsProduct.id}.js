@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql  } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { Carousel, Divider, Icon, Button } from 'antd'
+import { Carousel, Divider, Icon, Button, Row, Col } from 'antd'
 import './style.scss'
 
 import Layout from "../../components/layout"
@@ -14,49 +14,57 @@ const Product = ({data, pageContext}) => {
 
   return (
     <Layout>
-      <div className='custom-product-page'>
-        <Carousel 
-          dotPosition={'bottom'} 
-          autoplay effect={'fade'} 
-          className={'custom-carousel'}>
-          {product.carrousel.length > 0 ? product.carrousel.map((image, index) => {
-            return <div key={index}>
-              <GatsbyImage 
-                image={image.gatsbyImageData}
-                objectFit={'cover'}
+      <Row className='custom-product-page'>
+        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 10 }}>
+          <Carousel 
+            autoplay
+            dotPosition={'bottom'} 
+            effect={'fade'} 
+            className={'custom-carousel'}>
+            {product.carrousel.length > 0 ? product.carrousel.map((image, index) => {
+              return (
+                <div key={index}>
+                  <GatsbyImage 
+                    image={image.gatsbyImageData}
+                    objectFit={'cover'}
+                    className='product-image'
+                    />
+                </div>
+                )
+            }) : <GatsbyImage 
+                  image={product.image.gatsbyImageData}
+                  objectFit={'cover'}
                 />
-            </div>
-          }) : <GatsbyImage 
-                image={product.image.gatsbyImageData}
-                objectFit={'cover'}
-              />
-          }
-        </Carousel>
-        <div className='custom-product-description'>
-          <h1>{product.name}</h1>
-          <Divider />
-          <p>{product.description}</p>
-          <Divider />
-          <a href='#'
-            className='snipcart-add-item'
-            data-item-id={product.id}
-            data-item-description={product.description}
-            data-item-price={product.price}
-            data-item-image={product.image.url}
-            data-item-name={product.name}
-            data-item-url={product.path}
-          >
-            <Button className='custom-button-add-cart'
-              size={'large'}>
-            <Icon 
-                style={{ fontSize: '40px', color: '#08c' }}
-                type="shopping-cart" key="shopping-cart" 
-              />Ajouter au panier
-            </Button>
-          </a>
-          <span className='price'>{product.price}€ ttc</span>
-        </div>
-      </div>
+            }
+          </Carousel>
+        </Col>
+        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 14 }}>
+          <div className='custom-product-description'>
+            <h1>{product.name}</h1>
+            <Divider />
+            <p>{product.description}</p>
+            <Divider />
+            <a href='#'
+              className='snipcart-add-item'
+              data-item-id={product.id}
+              data-item-description={product.description}
+              data-item-price={product.price}
+              data-item-image={product.image.url}
+              data-item-name={product.name}
+              data-item-url={product.path}
+            >
+              <Button className='custom-button-add-cart'
+                size={'large'}>
+              <Icon 
+                  style={{ fontSize: '40px', color: '#08c' }}
+                  type="shopping-cart" key="shopping-cart" 
+                />Ajouter au panier
+              </Button>
+            </a>
+            <span className='price'>{product.price}€ ttc</span>
+          </div>
+        </Col>
+      </Row>
     </Layout>
     )
 }

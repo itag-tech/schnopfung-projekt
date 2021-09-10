@@ -44,7 +44,6 @@ const IndexPage = ({data}) => {
           {products.map(({node : product}) => (
             <Card product={product} />
           ))}
-
           </main>
         </Layout>
       </SnipcartContext.Provider>

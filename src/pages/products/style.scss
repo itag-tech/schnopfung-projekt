@@ -1,13 +1,19 @@
 .custom-product-page {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
 
   .custom-carousel {
-    flex-grow: 1;
-    width: 500px;
+    max-width: 100%;
+    height: auto;
+
+    .product-image {
+      text-align: center;
+    }
+
     .slick-slide {
-      padding: 40px;
+      padding: 5%;
+      margin: 0 auto;
     }
     .slick-dots {
       BUTTON {
@@ -23,8 +29,8 @@
     }
   }
   .custom-product-description {
-    flex-grow: 2;
     height: 100%;
+    padding: 5%;
 
     .custom-button-add-cart {
       height: 100%;
