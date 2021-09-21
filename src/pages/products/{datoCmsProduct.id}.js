@@ -1,51 +1,65 @@
-import React from "react"
-import { graphql  } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Carousel, Divider, Icon, Button, Row, Col } from 'antd'
 import './style.scss'
 
-import Layout from "../../components/layout"
+import Layout from '../../components/layout'
 
-const Product = ({data, pageContext}) => {
-
+const Product = ({ data, pageContext }) => {
   const product = data.allDatoCmsProduct.edges.filter(item => {
-      return item.node.id === pageContext.id
+    return item.node.id === pageContext.id
   })[0].node
 
   return (
     <Layout>
-      <Row className='custom-product-page'>
-        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 10 }}>
-          <Carousel 
+      <Row className="custom-product-page">
+        <Col
+          xs={{ span: 24 }}
+          sm={{ span: 24 }}
+          md={{ span: 24 }}
+          lg={{ span: 10 }}
+        >
+          <Carousel
             autoplay
-            dotPosition={'bottom'} 
-            effect={'fade'} 
-            className={'custom-carousel'}>
-            {product.carrousel.length > 0 ? product.carrousel.map((image, index) => {
-              return (
-                <div key={index}>
-                  <GatsbyImage 
-                    image={image.gatsbyImageData}
-                    objectFit={'cover'}
-                    className='product-image'
+            dotPosition={'bottom'}
+            effect={'fade'}
+            className={'custom-carousel'}
+          >
+            {product.carrousel.length > 0 ? (
+              product.carrousel.map((image, index) => {
+                return (
+                  <div key={index}>
+                    <GatsbyImage
+                      image={image.gatsbyImageData}
+                      objectFit={'cover'}
+                      className="product-image"
                     />
-                </div>
+                  </div>
                 )
-            }) : <GatsbyImage 
-                  image={product.image.gatsbyImageData}
-                  objectFit={'cover'}
-                />
-            }
+              })
+            ) : (
+              <GatsbyImage
+                image={product.image.gatsbyImageData}
+                objectFit={'cover'}
+              />
+            )}
           </Carousel>
         </Col>
-        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 14 }}>
-          <div className='custom-product-description'>
+        <Col
+          xs={{ span: 24 }}
+          sm={{ span: 24 }}
+          md={{ span: 24 }}
+          lg={{ span: 14 }}
+        >
+          <div className="custom-product-description">
             <h1>{product.name}</h1>
             <Divider />
             <p>{product.description}</p>
             <Divider />
-            <a href='#'
-              className='snipcart-add-item'
+            <a
+              href="#"
+              className="snipcart-add-item"
               data-item-id={product.id}
               data-item-description={product.description}
               data-item-price={product.price}
@@ -53,20 +67,21 @@ const Product = ({data, pageContext}) => {
               data-item-name={product.name}
               data-item-url={product.path}
             >
-              <Button className='custom-button-add-cart'
-                size={'large'}>
-              <Icon 
+              <Button className="custom-button-add-cart" size={'large'}>
+                <Icon
                   style={{ fontSize: '40px', color: '#08c' }}
-                  type="shopping-cart" key="shopping-cart" 
-                />Ajouter au panier
+                  type="shopping-cart"
+                  key="shopping-cart"
+                />
+                Ajouter au panier
               </Button>
             </a>
-            <span className='price'>{product.price}€ ttc</span>
+            <span className="price">{product.price}€ ttc</span>
           </div>
         </Col>
       </Row>
     </Layout>
-    )
+  )
 }
 
 export default Product
@@ -82,15 +97,11 @@ export const query = graphql`
           description
           carrousel {
             url
-            gatsbyImageData (
-              width: 400
-            )
+            gatsbyImageData(width: 400)
           }
           image {
             url
-            gatsbyImageData(
-              width: 400  
-            )
+            gatsbyImageData(width: 400)
           }
         }
       }

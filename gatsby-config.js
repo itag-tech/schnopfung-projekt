@@ -3,7 +3,7 @@ module.exports = {
     title: `Schopfung Projekt`,
     description: `Description du site Schopfung Projekt`,
     author: `Thomas AGUIRREGABIRIA`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,9 +11,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        implementation: require("sass"),
+        implementation: require('sass'),
+      },
     },
-   },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,21 +25,22 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-source-datocms',
-      options: {apiToken: `0b2da491ae97ffdc0d787f61848c89`}
+      options: { apiToken: `0b2da491ae97ffdc0d787f61848c89` },
     },
     {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
-        version: "3.2.1",
-        publicApiKey: "ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3", // use public api key here or in environment variable
-        defaultLang: "fr",
-        currency: "eur",
+        version: '3.2.1',
+        publicApiKey:
+          'ZmNjNDEzMTgtMjVjNC00MGEwLTk2ZWUtMGFiY2RlYTU1MTZiNjM3NjY0NTEwOTI3NTcxNTU3', // use public api key here or in environment variable
+        defaultLang: 'fr',
+        currency: 'eur',
         openCartOnAdd: false,
         useSideCart: false,
         locales: {
           fr: {
             actions: {
-              checkout: "Valider le panier",
+              checkout: 'Valider le panier',
             },
           },
         },

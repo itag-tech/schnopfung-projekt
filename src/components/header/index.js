@@ -1,10 +1,8 @@
-import React from "react"
+import React from 'react'
 import Component from './header'
 
-const Header = ({siteTitle}) => {
-    return (
-        <Component siteTitle={siteTitle}/>
-    )
+const Header = ({ siteTitle }) => {
+  return <Component siteTitle={siteTitle} />
 }
 
 export default Header

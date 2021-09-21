@@ -1,31 +1,30 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useState, useEffect, useContext } from 'react'
 import { SnipcartContext } from 'gatsby-plugin-snipcart-advanced/context'
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import { Icon } from 'antd'
 import './style.scss'
 
 /**
  * Header du site avec titre et panier
- * @param {siteTitle} Nom du site  
- * @returns 
+ * @param {siteTitle} Nom du site
+ * @returns
  */
 const Header = ({ siteTitle }) => {
-
   const [cartState, setCartState] = useState()
   const localSnipcartContext = useContext(SnipcartContext)
 
   useEffect(() => {
     localSnipcartContext && setCartState(localSnipcartContext.state)
   }, [localSnipcartContext])
-  
-  //---------------------------------------------------------------------------------------------------
-  //-----------------------------------  ↓  RENDER  ↓  ------------------------------------------------
-  //---------------------------------------------------------------------------------------------------
+
+  // ---------------------------------------------------------------------------------------------------
+  // -----------------------------------  ↓  RENDER  ↓  ------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------
 
   return (
     <header>
-      <div className='custom-header'>
+      <div className="custom-header">
         <h1 style={{ margin: 0 }}>
           <Link
             to="/"
@@ -37,20 +36,26 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Link>
         </h1>
-        {cartState && <button className='snipcart-checkout custom-cart'>
-            <div className='custom-cart-icon'>
+        {cartState && (
+          <button className="snipcart-checkout custom-cart">
+            <div className="custom-cart-icon">
               <Icon
-                  style={{fontSize: '2em'}}
-                  type="shopping-cart" 
-                  key="shopping-cart" /> 
+                style={{ fontSize: '2em' }}
+                type="shopping-cart"
+                key="shopping-cart"
+              />
             </div>
-            <div className='custom-snipcart'>
-              <div className={`${cartState.cartQuantity !== 0 && 'custom-count' } `}>
-                <span>{cartState.cartQuantity !== 0 && cartState.cartQuantity}</span> 
+            <div className="custom-snipcart">
+              <div
+                className={`${cartState.cartQuantity !== 0 && 'custom-count'} `}
+              >
+                <span>
+                  {cartState.cartQuantity !== 0 && cartState.cartQuantity}
+                </span>
               </div>
             </div>
-        </button> 
-        }
+          </button>
+        )}
       </div>
     </header>
   )
